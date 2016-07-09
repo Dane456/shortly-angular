@@ -1,22 +1,13 @@
 <div id='container'>
   <!-- Your html here -->
-<!--   <div>
+  <div>
     <img src='/redirect_icon.png'/>
     <div class='info'>
-      <div class='visits'><span class='count'>{{visits}}</span>Visits</div>
-      <div class='title'>{{title}}</div>
-      <div class='original'>{{url}}</div>
-      <a href='{{baseUrl}}/{{code}}'>{{baseUrl}}/{{code}}</a>
+      <div class='visits'><span ng-repeat="link in data.links" class='count'>{{link.count}}</span>Visits</div>
+      <div ng-repeat="link in data.links" class='title'>{{link.title}}</div>
+      <div ng-repeat="link in data.links" class='original'>{{link.baseUrl}}</div>
+      <a ng-repeat = "link in data.links" ng-href='{{link.baseUrl}}/{{link.code}}'>http://localhost:3000/{{link.code}}</a>
     </div>
-  </div> -->
-  
-
-
-  <div>
-    <ul>
-      <li ng-repeat="url in data.links"><{{url}}</li>
-    </ul>
   </div>
-
 
 </div>
