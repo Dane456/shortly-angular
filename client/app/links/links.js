@@ -1,11 +1,13 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links) {
+.controller('LinksController', function ($scope, $location, $window, Links) {
   // Your code here
   $scope.data = {};
-  console.log('linkscontroller');
-  Links.getAll().then(function(data) {
-    $scope.data.links = data;
-    console.log("000000000000000000000" + data);
-  });
+  if (!$window.localStorage['com.shortly']) {
+    $location.path('/signin');
+  } else {
+    Links.getAll().then(function(data) {
+      $scope.data.links = data;
+    });
+  }
 });
