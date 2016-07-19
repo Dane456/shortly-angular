@@ -1,9 +1,13 @@
 <div id='container'>
 <!-- Your code here -->
-  <div>
-    <input ng-model="linkInput">
+  <form name="inputForm">
+    <input type = "url" name="input" ng-model="linkInput.url" required>
     <button ng-click="addLink()">Shorten</button>
-  </div>
+    <div role="alert">
+	    <span class="error" ng-show="inputForm.input.$error.required">Required!</span>
+	    <span class="error" ng-show="inputForm.input.$error.url">Not valid url!</span>
+    </div>
+ </form>
 </div>
 
 

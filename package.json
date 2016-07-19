@@ -17,9 +17,11 @@
     "lint": "eslint ./"
   },
   "dependencies": {
+    "angular": "^1.5.7",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
+    "firebase": "^3.1.0",
     "jwt-simple": "^0.5.0",
     "mongoose": "^4.1.0",
     "morgan": "^1.1.1",

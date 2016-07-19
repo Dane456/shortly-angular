@@ -1,12 +1,13 @@
 <div id='container'>
   <!-- Your html here -->
-  <div ng-repeat="link in data.links">
+  <input type="text" name="input" ng-model="search" >
+  <div ng-repeat="link in data.links | orderBy: '-visits' | filter :{title:search}">
     <img src='/redirect_icon.png'/>
     <div class='info'>
-      <div class='visits'><span class='count'>{{link.count}}</span>Visits</div>
+      <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
       <div class='title'>{{link.title}}</div>
       <div class='original'>{{link.baseUrl}}</div>
-      <a  ng-href='{{link.baseUrl}}/{{link.code}}'>http://localhost:3000/{{link.code}}</a>
+      <a  ng-href='{{link.baseUrl}}/{{link.code}}'>{{link.baseUrl}}/{{link.code}}</a>
     </div>
   </div>
 

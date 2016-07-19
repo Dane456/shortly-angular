@@ -1,7 +1,11 @@
 <div id='signin'>
   <h1>signin</h1>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text' ng-model='user.username'>
+    <input type="email" name="input" ng-model='user.username' required>
+    <div role="alert">
+    	<span ng-show="signinForm.input.$error.email">Invalid Email</span>
+    	<span ng-show="signinForm.input.$error.required">Required</span>
+    </div>
     <input type="password" ng-model='user.password'>
     <button>signin</button>
   </form>

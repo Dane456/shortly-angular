@@ -7,6 +7,7 @@ angular.module('shortly.links', [])
     $location.path('/signin');
   } else {
     Links.getAll().then(function(data) {
+      console.log(data);
       $scope.data.links = data;
     });
   }
