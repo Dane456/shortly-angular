@@ -1,6 +1,8 @@
 #shortly-angular
 This project is a link shortening applicaiton.
 
+Example: 
+![alt text](https://github.com/Dane456/shortly-angular/blob/master/client/assets/example.gif "Logo Title Text 1")
 
 ###To Run:
 	-run npm install -g gulp karma karma-cli nodemon global modules
